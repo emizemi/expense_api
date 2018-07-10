@@ -28,7 +28,7 @@ class ExpensesController < ApplicationController
                         Expense.all.order(:price).reverse_order.limit(3)
                     else
                      Expense.all   
-                   end
+                   end 
         render json: expenses
     end
 
@@ -118,7 +118,7 @@ class ExpensesController < ApplicationController
     end
 
     def expense_params
-        params.require(:expense).require(:title, :price, :quantity, :date, :user_id)
+        params.require(:expense).permit(:title, :price, :quantity, :date, :user_id)
     end
 
      #filter by date, price, quantity

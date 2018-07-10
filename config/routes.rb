@@ -17,7 +17,6 @@ Rails.application.routes.draw do
      get "find_smallest_price"
      get "find_largest_quantity"
      get "find_smallest_quantity"
-
     end
   end
 
